@@ -1,17 +1,18 @@
-import Pencil from './Pencil'
-import { createShape } from '../shapes'
+import Pencil from "./Pencil";
+import {createShape} from "../shapes";
 
 class Eraser extends Pencil {
-  makePoint(x, y, lc) { 
-    return createShape('Point', {
-      x, 
-      y, 
-      size: this.strokeWidth, 
-      color: '#000'}); 
+    makePoint(x, y, lc) {
+        return createShape("Point", {
+            x,
+            y,
+            size: this.strokeWidth,
+            color: "#000",
+        });
     }
-  makeShape() { 
-    return createShape('ErasedLinePath'); 
-  }
+    makeShape() {
+        return createShape("ErasedLinePath");
+    }
 }
 
 Eraser.prototype.name = "Eraser";

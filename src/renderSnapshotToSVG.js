@@ -13,10 +13,13 @@ const renderSnapshotToSVG = function(snapshot, opts) {
     if (opts.margin == null) {
         opts.margin = {top: 0, right: 0, bottom: 0, left: 0};
     }
-    const imageSize = opts.width && opts.height ? { width: opts.width, height: opts.height } : snapshot.imageSize || {
-        width: INFINITE,
-        height: INFINITE,
-    };
+    const imageSize =
+        opts.width && opts.height
+            ? {width: opts.width, height: opts.height}
+            : snapshot.imageSize || {
+                  width: INFINITE,
+                  height: INFINITE,
+              };
 
     const colors = snapshot.colors || {background: "transparent"};
     const allShapes = shapes.concat(backgroundShapes);
